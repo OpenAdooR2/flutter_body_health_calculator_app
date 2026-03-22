@@ -60,58 +60,59 @@ class _BmrUiState extends State<BmrUi> {
                 ),
                 // ส่วนของปุ่มเลือกเพศ
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          selectedSex = 1;
-                        });
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                          top: 20,
-                          left: 60,
-                          right: 60,
-                          bottom: 20,
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            selectedSex = 1;
+                          });
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 20),
+                          child: Text(
+                            'ชาย',
+                            style: TextStyle(
+                              color: selectedSex == 1
+                                  ? Colors.white
+                                  : Colors.black,
+                            ),
+                          ),
                         ),
-                        child: Text(
-                          'ชาย',
-                          style: TextStyle(color: Colors.grey[900]),
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            selectedSex == 1 ? Colors.blue : Colors.grey[300],
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadiusDirectional.circular(8),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                              selectedSex == 1 ? Colors.blue : Colors.grey[300],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
                         ),
                       ),
                     ),
-                    SizedBox(width: 30),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          selectedSex = 2;
-                        });
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                          top: 20,
-                          left: 60,
-                          right: 60,
-                          bottom: 20,
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            selectedSex = 2;
+                          });
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 20),
+                          child: Text(
+                            'หญิง',
+                            style: TextStyle(
+                              color: selectedSex == 2
+                                  ? Colors.white
+                                  : Colors.black,
+                            ),
+                          ),
                         ),
-                        child: Text(
-                          'หญิง',
-                          style: TextStyle(color: Colors.grey[900]),
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            selectedSex == 2 ? Colors.blue : Colors.grey[300],
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadiusDirectional.circular(8),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                              selectedSex == 2 ? Colors.blue : Colors.grey[300],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
                         ),
                       ),
                     ),
